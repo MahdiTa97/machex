@@ -1,13 +1,15 @@
 const webpack = require('webpack'),
   path = require('path'),
   fileSystem = require('fs-extra'),
-  env = require('./utils/env'),
+  env = require('./env'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   TerserPlugin = require('terser-webpack-plugin'),
   CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 
 const ASSET_PATH = process.env.ASSET_PATH || '/';
+
+const scriptDir = path.join(__dirname, '../src');
 
 const alias = {
   'react-dom': '@hot-loader/react-dom',
@@ -34,13 +36,13 @@ if (fileSystem.existsSync(secretsPath)) {
 }
 
 const entry = {
-  newtab: path.join(__dirname, 'src', 'pages', 'Newtab', 'index.jsx'),
-  options: path.join(__dirname, 'src', 'pages', 'Options', 'index.jsx'),
-  popup: path.join(__dirname, 'src', 'pages', 'Popup', 'index.jsx'),
-  background: path.join(__dirname, 'src', 'pages', 'Background', 'index.js'),
-  contentScript: path.join(__dirname, 'src', 'pages', 'Content', 'index.js'),
-  devtools: path.join(__dirname, 'src', 'pages', 'Devtools', 'index.js'),
-  panel: path.join(__dirname, 'src', 'pages', 'Panel', 'index.jsx'),
+  newtab: path.join(scriptDir, 'pages', 'Newtab', 'index.jsx'),
+  options: path.join(scriptDir, 'pages', 'Options', 'index.jsx'),
+  popup: path.join(scriptDir, 'pages', 'Popup', 'index.jsx'),
+  background: path.join(scriptDir, 'pages', 'Background', 'index.js'),
+  contentScript: path.join(scriptDir, 'pages', 'Content', 'index.js'),
+  devtools: path.join(scriptDir, 'pages', 'Devtools', 'index.js'),
+  panel: path.join(scriptDir, 'pages', 'Panel', 'index.jsx'),
 };
 
 const options = {
@@ -54,7 +56,7 @@ const options = {
 
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '../build'),
     clean: true,
     publicPath: ASSET_PATH,
   },
@@ -123,7 +125,7 @@ const options = {
         {
           /* generates the manifest file using the package.json information */
           from: 'src/manifest.json',
-          to: path.join(__dirname, 'build'),
+          to: path.join(__dirname, '../build'),
           force: true,
           transform: (content, path) =>
             Buffer.from(
@@ -136,12 +138,12 @@ const options = {
         },
         {
           from: 'src/pages/Content/content.styles.css',
-          to: path.join(__dirname, 'build'),
+          to: path.join(__dirname, '../build'),
           force: true,
         },
         {
           from: 'src/assets/img',
-          to: path.join(__dirname, 'build'),
+          to: path.join(__dirname, '../build'),
           force: true,
         },
       ],
@@ -173,7 +175,7 @@ function getHtmlPlugins(chunks) {
   return chunks.map(
     (chunk) =>
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'src', 'pages', chunk, 'index.html'),
+        template: path.join(scriptDir, 'pages', chunk, 'index.html'),
         filename: chunk.toLowerCase() + '.html',
         chunks: [chunk.toLowerCase()],
         cache: false,

@@ -5,7 +5,7 @@ process.env.ASSET_PATH = '/';
 
 const WebpackDevServer = require('webpack-dev-server'),
   webpack = require('webpack'),
-  config = require('../webpack.config'),
+  config = require('./webpack.common'),
   env = require('./env'),
   path = require('path');
 

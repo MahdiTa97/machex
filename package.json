@@ -8,8 +8,8 @@
     "url": "https://github.com/MahdiTa97/pachex.git"
   },
   "scripts": {
-    "build": "node utils/build.js",
-    "start": "node utils/webserver.js",
+    "build": "node utils/webpack.prod.js",
+    "start": "node utils/webpack.dev.js",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {

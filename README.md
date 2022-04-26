@@ -18,7 +18,7 @@
 1. `git clone https://github.com/MahdiTa97/pachex.git`
 2. `cd pachex`
 3. `npm install`
-4. `npm start`
+4. `npm run start`
 5. open the `chrome://extensions` URL and turn on developer mode from the top left and then click; on `Load Unpacked` and select the `build` folder.
 
 ## Scripts

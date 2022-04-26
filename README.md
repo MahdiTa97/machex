@@ -1,4 +1,9 @@
-# Pachex (A React Chrome Extension Boilerplate)
+<br />
+<p align="center">
+  <img width="250px" src="./logo.png" alt="Pomodoros Logo" />
+</p>
+
+<h3 align="center">MACHEX (A React Chrome Extension Boilerplate)</h3>
 
 ## Features
 
@@ -15,8 +20,8 @@
 
 ## Getting Started
 
-1. `git clone https://github.com/MahdiTa97/pachex.git`
-2. `cd pachex`
+1. `git clone https://github.com/MahdiTa97/machex.git`
+2. `cd machex`
 3. `npm install`
 4. `npm run start`
 5. open the `chrome://extensions` URL and turn on developer mode from the top left and then click; on `Load Unpacked` and select the `build` folder.

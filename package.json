@@ -1,11 +1,11 @@
 {
-  "name": "pachex",
+  "name": "machex",
   "version": "1.0.0",
   "description": "PA Chrome Extension built with React 18, Tailwind 3, Webpack 5, and Webpack Dev Server 4",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MahdiTa97/pachex.git"
+    "url": "https://github.com/MahdiTa97/machex.git"
   },
   "scripts": {
     "build": "node utils/webpack.prod.js",

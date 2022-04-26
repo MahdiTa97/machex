@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Pachex",
+  "name": "Machex",
   "description": "PA Chrome Extension",
   "version": "1.0.0",
   "icons": {
@@ -15,7 +15,7 @@
     "service_worker": "background.bundle.js"
   },
   "action": {
-    "default_title": "Pachex",
+    "default_title": "Machex",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "16x16.png",

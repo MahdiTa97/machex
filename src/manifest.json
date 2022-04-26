@@ -49,5 +49,5 @@
       "matches": []
     }
   ],
-  "permissions": ["storage", "alarms"]
+  "permissions": ["storage", "cookies", "tabs", "declarativeContent"]
 }

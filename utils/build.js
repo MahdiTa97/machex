@@ -3,7 +3,7 @@ process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
 process.env.ASSET_PATH = '/';
 
-var webpack = require('webpack'),
+const webpack = require('webpack'),
   config = require('../webpack.config');
 
 delete config.chromeExtensionBoilerplate;

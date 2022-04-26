@@ -1,4 +1,4 @@
-# Chrome Extension Boilerplate with React 18 and Webpack 5
+# Chrome Extension Boilerplate with React 18 and Tailwind 3 and Webpack 5
 
 ## Announcements
 
@@ -22,7 +22,7 @@ This boilerplate is updated with:
 - [Prettier](https://prettier.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-This boilerplate is heavily inspired by and adapted from [https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate), with additional support for React 18 features, Webpack 5, and Webpack Dev Server 4.
+This boilerplate is heavily inspired by and adapted from [https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate), with additional support for React 18 features, Tailwind 3, Webpack 5, and Webpack Dev Server 4.
 
 Please open up an issue to nudge me to keep the npm packages up-to-date. FYI, it takes time to make different packages with different versions work together nicely.
 

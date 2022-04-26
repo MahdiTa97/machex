@@ -3,11 +3,11 @@ process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';
 process.env.ASSET_PATH = '/';
 
-const WebpackDevServer = require('webpack-dev-server'),
-  webpack = require('webpack'),
-  config = require('./webpack.common'),
-  env = require('./env'),
-  path = require('path');
+const WebpackDevServer = require('webpack-dev-server');
+const webpack = require('webpack');
+const config = require('./webpack.common');
+const env = require('./env');
+const path = require('path');
 
 const options = config.chromeExtensionBoilerplate || {};
 const excludeEntriesToHotReload = options.notHotReload || [];

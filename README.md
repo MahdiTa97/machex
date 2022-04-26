@@ -1,67 +1,46 @@
-# Chrome Extension Boilerplate with React 18 and Tailwind 3 and Webpack 5
-
-## Announcements
-
-- Check out the [Manifest V3 Migration Guide](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-migration/).
-- Recently updated from **[React](https://reactjs.org)** ~~17~~ to **18**!
-- Recently updated from **[Webpack Dev Server](https://webpack.js.org/configuration/dev-server/)** ~~3.x~~ to **4.x** and **[Webpack](https://webpack.js.org/)** ~~4~~ to **5**!
-- Recently added [TypeScript](https://www.typescriptlang.org/) Support!
+# Pachex (A React Chrome Extension Boilerplate)
 
 ## Features
 
 This is a basic Chrome Extensions boilerplate to help you write modular and modern Javascript code, load CSS easily and [automatic reload the browser on code changes](https://webpack.github.io/docs/webpack-dev-server.html#automatic-refresh).
 
-This boilerplate is updated with:
-
-- [Chrome Extension Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/)
+- [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/)
 - [React 18](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Webpack 5](https://webpack.js.org/)
 - [Webpack Dev Server 4](https://webpack.js.org/configuration/dev-server/)
 - [React Hot Loader](https://github.com/gaearon/react-hot-loader)
+- [Tailwind V3](https://tailwindcss.com/)
 - [eslint-config-react-app](https://www.npmjs.com/package/eslint-config-react-app)
 - [Prettier](https://prettier.io/)
-- [TypeScript](https://www.typescriptlang.org/)
 
-This boilerplate is heavily inspired by and adapted from [https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate), with additional support for React 18 features, Tailwind 3, Webpack 5, and Webpack Dev Server 4.
+## Getting Started
 
-Please open up an issue to nudge me to keep the npm packages up-to-date. FYI, it takes time to make different packages with different versions work together nicely.
+1. `git clone https://github.com/MahdiTa97/pachex.git`
+2. `cd pachex`
+3. `npm install`
+4. `npm start`
+5. open `chrome://extensions` url and turn on developer mode from top left and then click; on `Load Unpacked` and select the `build` folder.
 
-## Installing and Running
+## Scripts
 
-### Procedures:
+- `start`
+- `build`
+- `prettier`
 
-1. Check if your [Node.js](https://nodejs.org/) version is >= **14**.
-2. Clone this repository.
-3. Change the package's `name`, `description`, and `repository` fields in `package.json`.
-4. Change the name of your extension on `src/manifest.json`.
-5. Run `npm install` to install the dependencies.
-6. Run `npm start`
-7. Load your extension on Chrome following:
-   1. Access `chrome://extensions/`
-   2. Check `Developer mode`
-   3. Click on `Load unpacked extension`
-   4. Select the `build` folder.
-8. Happy hacking.
+## Publishing
 
-## Structure
+After the development of your extension run the command
 
-All your extension's code must be placed in the `src` folder.
+```
+$ NODE_ENV=production npm run build
+```
 
-The boilerplate is already prepared to have a popup, an options page, a background page, and a new tab page (which replaces the new tab page of your browser). But feel free to customize these.
+Now, the content of `build` folder will be the extension ready to be submitted to the Chrome Web Store. Just take a look at the [official guide](https://developer.chrome.com/webstore/publish) to more infos about publishing.
 
 ## TypeScript
 
 This boilerplate now supports TypeScript! The `Options` Page is implemented using TypeScript. Please refer to `src/pages/Options/` for example usages.
-
-## Webpack auto-reload and HRM
-
-To make your workflow much more efficient this boilerplate uses the [webpack server](https://webpack.github.io/docs/webpack-dev-server.html) to development (started with `npm start`) with auto reload feature that reloads the browser automatically every time that you save some file in your editor.
-
-You can run the dev mode on other port if you want. Just specify the env var `port` like this:
-
-```
-$ PORT=6002 npm run start
-```
 
 ## Content Scripts
 
@@ -95,16 +74,6 @@ and on your `src/manifest.json`:
 }
 ```
 
-## Packing
-
-After the development of your extension run the command
-
-```
-$ NODE_ENV=production npm run build
-```
-
-Now, the content of `build` folder will be the extension ready to be submitted to the Chrome Web Store. Just take a look at the [official guide](https://developer.chrome.com/webstore/publish) to more infos about publishing.
-
 ## Secrets
 
 If you are developing an extension that talks with some API you probably are using different keys for testing and production. Is a good practice you not commit your secret keys and expose to anyone that have access to the repository.
@@ -125,10 +94,3 @@ ApiCall({ key: secrets.key });
 ```
 
 :point_right: The files with name `secrets.*.js` already are ignored on the repository.
-
-## Resources:
-
-- [Webpack documentation](https://webpack.js.org/concepts/)
-- [Chrome Extension documentation](https://developer.chrome.com/extensions/getstarted)
-
----

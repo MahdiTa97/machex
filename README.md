@@ -98,3 +98,6 @@ ApiCall({ key: secrets.key });
 ```
 
 Files named `secret". *. js` have already been ignored in the repository.
+
+## Credits
+- It is largely derived from [lxieyang/chrome-extension-boilerplate-react] which itself is adapted from [samuelsimoes/chrome-extension-webpack-boilerplate](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate).

@@ -1,18 +1,32 @@
 {
   "manifest_version": 3,
-  "name": "pachex",
+  "name": "Pachex",
   "description": "PA Chrome Extension",
+  "version": "1.0.0",
+  "icons": {
+    "16": "16x16.png",
+    "32": "32x32.png",
+    "64": "64x64.png",
+    "128": "128x128.png",
+    "256": "256x256.png"
+  },
   "options_page": "options.html",
-  "background": { "service_worker": "background.bundle.js" },
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
   "action": {
+    "default_title": "Pachex",
     "default_popup": "popup.html",
-    "default_icon": "icon-34.png"
+    "default_icon": {
+      "16": "16x16.png",
+      "32": "32x32.png",
+      "64": "64x64.png",
+      "128": "128x128.png",
+      "256": "256x256.png"
+    }
   },
   "chrome_url_overrides": {
     "newtab": "newtab.html"
-  },
-  "icons": {
-    "128": "icon-128.png"
   },
   "content_scripts": [
     {
@@ -24,8 +38,16 @@
   "devtools_page": "devtools.html",
   "web_accessible_resources": [
     {
-      "resources": ["content.styles.css", "icon-128.png", "icon-34.png"],
+      "resources": [
+        "content.styles.css",
+        "16x16.png",
+        "32x32.png",
+        "64x64.png",
+        "128x128.png",
+        "256x256.png"
+      ],
       "matches": []
     }
-  ]
+  ],
+  "permissions": ["storage", "alarms"]
 }

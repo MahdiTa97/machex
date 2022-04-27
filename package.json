@@ -8,8 +8,8 @@
     "url": "https://github.com/MahdiTa97/machex.git"
   },
   "scripts": {
-    "build": "node utils/webpack.prod.js",
-    "start": "node utils/webpack.dev.js",
+    "build": "node configs/webpack.prod.js",
+    "start": "node configs/webpack.dev.js",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
